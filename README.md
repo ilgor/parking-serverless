@@ -1,10 +1,18 @@
 # Flask Serverless Demo
+
+## Prerequisites:
+  - Python & Flask
+  - Serverless Framework
+  - AWS
+
+## Steps to build and deploy:
   1. Create project folder: `mkdir parking-serverless && cd parking-serverless`
   2. Create package.json: `npm init -f`
   3. Install python related packges: `npm install --save-dev serverless-wsgi serverless-python-requirements`
   4. Create Virtual Environment: `python3 -m venv venv`
   5. Activate your venv: `source venv/bin/activate`
-  6. Create file `app.py` and put the following code in it: 
+  6. Install Flask `pip install flask`
+  7. Create file `app.py` and put the following code in it: 
   ```python
   from flask import Flask, render_template
 
