@@ -2,7 +2,9 @@
   1. Create project folder: `mkdir parking-serverless && cd parking-serverless`
   2. Create package.json: `npm init -f`
   3. Install python related packges: `npm install --save-dev serverless-wsgi serverless-python-requirements`
-  4. Create file `app.py` and put the following code in it: 
+  4. Create Virtual Environment: `python3 -m venv venv`
+  5. Activate your venv: `source venv/bin/activate`
+  6. Create file `app.py` and put the following code in it: 
   ```python
   from flask import Flask, render_template
 
@@ -24,8 +26,8 @@
   if __name__ == '__main__':
     app.run()
   ```
-  5. Run locally on terminal `python app.py` and go to the URL
-  6. create `serverless.yml`
+  7. Run locally on terminal `python app.py` and go to the URL
+  8. create `serverless.yml`
   ```
   # serverless.yml
   service: serverless-flask
@@ -54,6 +56,6 @@
         - http: ANY /
         - http: 'ANY {proxy+}'
   ```
-  6. create `python3 -m venv venv`
-  7. `pip freeze > requirements.txt`
-  8.  `sls deploy`
+  9. create `python3 -m venv venv`
+  10. `pip freeze > requirements.txt`
+  11.  `sls deploy`
